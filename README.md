@@ -2,8 +2,8 @@
 
 [![license](https://img.shields.io/badge/license-MIT-green.svg?style=flat&cacheSeconds=2592000)](https://github.com/SorkOs09/LinuxCpuTempMonitor/blob/main/LICENSE)
 
-One day my laptop's fan was broke and I had to use an external fan. To keep my laptop from overheating I needed a program to track the temperature in real time. In solutions what I found in internet everythink was be not too good for me (somewhere it was not possible to see the entire history of the temperature for the day, somewhere it was not possible to save the data to a log file, etc.). 
-So I decided to make my own programm.
+One day my laptop's fan was broken and I had to use an external fan. To keep my laptop from overheating I needed a program to track the temperature in real time. Solutions what I found in internet everything was not good enough for me (somewhere it was not possible to see the entire history of the temperature for the day, somewhere it was not possible to save the data to a log file, etc.). 
+So I decided to make my own program.
 
 ## Required Additional Programms, Modules And Libraries
 
