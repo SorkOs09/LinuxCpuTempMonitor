@@ -164,8 +164,11 @@ def main():
 
 
     while True:
-        out = str(subprocess_check_output(["sensors"]))
-        
+        tmp_out = str(subprocess_check_output(["cat", "/sys/class/thermal/thermal_zone0/temp"]))
+        out     = ''
+        for i in tmp_out:
+            if i in ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9'):
+                out += i
         if args_stress_test:
             cpu_mhz_text = " STRESS TEST! "
             cpu_mhz      = " " + colored(cpu_mhz_text, "red", "on_white") + " "
@@ -174,9 +177,7 @@ def main():
             cpu_mhz_text = ""
             cpu_mhz      = ""   
 
-        temp_line = out[out.find("Tctl:"):]
-        temp_line = temp_line[temp_line.find("+"):]
-        temp_line = temp_line[:temp_line.find(".")]
+        temp_line = float(out)/1000.0
         temp_line = int(temp_line)
 
         if temp_line < 50:
